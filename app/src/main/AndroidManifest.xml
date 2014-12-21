@@ -20,6 +20,10 @@
             android:name="com.lls.blog.BlogActivity"
             android:label="@string/title_activity_blog" >
         </activity>
+        <activity
+            android:name="com.lls.camera.CameraActivity"
+            android:label="@string/title_activity_camera" >
+        </activity>
     </application>
 
 </manifest>
