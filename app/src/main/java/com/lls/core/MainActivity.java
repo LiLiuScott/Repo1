@@ -42,8 +42,8 @@ public class MainActivity extends Activity {
                     activity.startActivity(startIntent);
                     break;
                 case R.id.camera_button:
-//                    startIntent = new Intent(activity, BlogActivity.class);
-//                    activity.startActivity(startIntent);
+                    startIntent = new Intent(activity, BlogActivity.class);
+                    activity.startActivity(startIntent);
                     break;
             }
         }
