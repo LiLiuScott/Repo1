@@ -1,16 +1,44 @@
-package com.example.williamhscott.repo1;
+package com.lls.core;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
+import com.example.williamhscott.repo1.R;
 
 public class MainActivity extends Activity {
+    private View.OnClickListener mClickListener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mClickListener = new LLSClickListener(this);
+
+        setButtonClickListener(mClickListener);
+    }
+
+
+    private class LLSClickListener extends View.OnClickListener {
+        private Activity activity;
+
+        public LLSClickListener(Activity main) {
+            this.activity = main;
+        }
+
+
+    }
+
+
+    private void setButtonClickListener() {
+        Button blogButton = findViewById(R.id.blog_button);
+        Button cameraButton = findViewById(R.id.camera_button);
+        blogButton.setOnClickListener();
     }
 
 
