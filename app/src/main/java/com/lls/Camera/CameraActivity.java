@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.williamhscott.repo1.R;
+//wtf changes for push
 
 public class CameraActivity extends ActionBarActivity {
 
