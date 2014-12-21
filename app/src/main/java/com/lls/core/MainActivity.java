@@ -1,6 +1,7 @@
 package com.lls.core;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.williamhscott.repo1.R;
+import com.lls.blog.BlogActivity;
 
 public class MainActivity extends Activity {
     private View.OnClickListener mClickListener;
@@ -24,21 +26,34 @@ public class MainActivity extends Activity {
     }
 
 
-    private class LLSClickListener extends View.OnClickListener {
+    private class LLSClickListener implements View.OnClickListener {
         private Activity activity;
 
         public LLSClickListener(Activity main) {
             this.activity = main;
         }
 
-
+        @Override
+        public void onClick(View button) {
+            Intent startIntent;
+            switch (button.getId()) {
+                case R.id.blog_button:
+                    startIntent = new Intent(activity, BlogActivity.class);
+                    activity.startActivity(startIntent);
+                    break;
+                case R.id.camera_button:
+//                    startIntent = new Intent(activity, BlogActivity.class);
+//                    activity.startActivity(startIntent);
+                    break;
+            }
+        }
     }
 
-
-    private void setButtonClickListener() {
-        Button blogButton = findViewById(R.id.blog_button);
-        Button cameraButton = findViewById(R.id.camera_button);
-        blogButton.setOnClickListener();
+    private void setButtonClickListener(View.OnClickListener clickListener) {
+        Button blogButton = (Button) findViewById(R.id.blog_button);
+        Button cameraButton = (Button) findViewById(R.id.camera_button);
+        blogButton.setOnClickListener(clickListener);
+        cameraButton.setOnClickListener(clickListener);
     }
 
 

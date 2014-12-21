@@ -19,11 +19,10 @@ public class BlogActivity extends ActionBarActivity {
         setContentView(R.layout.activity_blog);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
+                    .add(R.id.container, new BlogFragment())
                     .commit();
         }
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -50,9 +49,9 @@ public class BlogActivity extends ActionBarActivity {
     /**
      * A placeholder fragment containing a simple view.
      */
-    public static class PlaceholderFragment extends Fragment {
+    public static class BlogFragment extends Fragment {
 
-        public PlaceholderFragment() {
+        public BlogFragment() {
         }
 
         @Override
