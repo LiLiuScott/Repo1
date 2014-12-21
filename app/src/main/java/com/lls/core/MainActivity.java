@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.lls.blog.BlogActivity;
+import com.lls.camera.CameraActivity;
 import com.lls.core.repo1.R;
 
 public class MainActivity extends Activity {
@@ -42,7 +43,7 @@ public class MainActivity extends Activity {
                     activity.startActivity(startIntent);
                     break;
                 case R.id.camera_button:
-                    startIntent = new Intent(activity, BlogActivity.class);
+                    startIntent = new Intent(activity, CameraActivity.class);
                     activity.startActivity(startIntent);
                     break;
             }
