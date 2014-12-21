@@ -8,8 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.williamhscott.repo1.R;
 import com.lls.blog.BlogActivity;
+import com.lls.core.repo1.R;
 
 public class MainActivity extends Activity {
     private View.OnClickListener mClickListener;
