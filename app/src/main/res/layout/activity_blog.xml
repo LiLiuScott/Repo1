@@ -6,4 +6,6 @@
     tools:context="com.lls.blog.BlogActivity"
     tools:ignore="MergeRootFrame">
 
+    <TextView
+
 </FrameLayout>
